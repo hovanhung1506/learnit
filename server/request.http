@@ -1,0 +1,59 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "test3",
+    "password": "test3"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "test3",
+    "password": "test3"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNhOTIxMTFkOGI0Yzk0OWY5ODJjY2UiLCJpYXQiOjE2NDkwMDA0OTZ9.5TuC31IKw-JfB2GZ8Gy9kR9mTfO9fZ94LB9V5cTijHs
+
+{
+    "title": "post 5",
+    "description": "by test",
+    "url": "google.com",
+    "status": "LEARNED"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNhYzI4NmQ4MjdmOGMzNDM5NWY3YjQiLCJpYXQiOjE2NDgwMjY1NDl9.VyZ1IdSuGrV1b3ZJBe8PkyE3tzhdihekz6BxtjV_n9k
+
+
+###
+
+PUT http://localhost:5000/api/posts/623acbddef369eff52414228
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNhYzI4NmQ4MjdmOGMzNDM5NWY3YjQiLCJpYXQiOjE2NDgwMjE0MzJ9.zUJUL_zgTt2SE1145S8YNLKD-lkA9ZOIZhhAiKxIZ_g
+
+{
+    "title": "Vue",
+    "description": "VUEE",
+    "url": "vue.org",
+    "status": "LEARNING"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/623acc2fef369eff5241422f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNhOTIxMTFkOGI0Yzk0OWY5ODJjY2UiLCJpYXQiOjE2NDgwMjU1MjR9.c0nQKj02BJyXSbPcOQd3akv5TCfKWgKqTHV3Rza4qJ8
+
+###
+
+DELETE http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNhOTIxMTFkOGI0Yzk0OWY5ODJjY2UiLCJpYXQiOjE2NDgwMjU1NTl9.slrk-vQAX12QB0ZgfItGrkaJnEoO7EPd5vy9clLwtaY
