@@ -21,9 +21,7 @@ const postRoutes = require('./routes/post');
 (async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://${
-        process.env.DB_USERNAME
-      }:${(process.env.DB_PASSWORD = 1234)}@mern-learnit.kuva3.mongodb.net/mern-learnit?retryWrites=true&w=majority`
+      `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@mern-learnit.kuva3.mongodb.net/mern-learnit?retryWrites=true&w=majority`
     );
     console.log('MongoDB Connected...');
   } catch (error) {
