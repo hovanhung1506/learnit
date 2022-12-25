@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const cors = require('cors');
+const helmet = require('helmet');
 // const connectDB = async () => {
 //   try {
 //     await mongoose.connect(
@@ -31,6 +32,7 @@ const postRoutes = require('./routes/post');
 })();
 
 const app = express();
+app.use(helmet());
 app.use(express.json());
 app.use(cors());
 app.use('/api/auth', authRouter);
